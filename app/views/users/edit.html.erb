@@ -1,0 +1,13 @@
+<body>
+    <h3>Edit page for <%= @user.email %></h3>
+    <%= form_for @user do |f| %>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+        <br>
+        <br>
+        <%= f.submit "Make Changes" %>
+    <% end %>
+    <br>
+    <%= button_to "All Users", users_path, method: :get %>
+
+</body>

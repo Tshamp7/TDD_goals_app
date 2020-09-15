@@ -2,8 +2,10 @@
     <h3> All the Users! </h3>
     <% @users.each do |user| %>
     <ol>
-        <li><%= user.email %></li>
+        <li><%= link_to "#{user.email}", user_path(user) %></li>
     </ol>
     <% end %>
+    <br>
+    
 
 </body>

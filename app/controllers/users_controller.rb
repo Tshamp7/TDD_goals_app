@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = current_user
+        @user = User.find_by(id: params[:id])
         render :show
     end
 
